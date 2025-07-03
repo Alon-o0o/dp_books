@@ -69,7 +69,7 @@ body{
 .image-container::before {
     content: '';
     position: absolute;
-    z-index: 10;
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100%;
@@ -86,19 +86,20 @@ body{
 }
 .buy-button {
     border: 1px solid #6a816b;
-    color: aliceblue;
+    color: #6a816b;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
     width: 100%;
     transition: 0.5s;
-    background-color: #abbdaca5;
+    background-color: #abbdac80;
 }
 .buy-button:hover {
     background: #6d1d26;
     border: none;
     border-radius:  10px 10px 0 0;
+    color: white;
 }
 .more{
     display: flex;
@@ -114,6 +115,7 @@ body{
 }
 .btn-more a:hover{
     color: #6d1d26;
+    text-decoration: underline;
 }
 
 /* Кталог начало */

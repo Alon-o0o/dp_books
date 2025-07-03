@@ -19,11 +19,6 @@ class BookController extends Controller
         return view('books.catalog', compact('books'));
     }
 
-    public function create()
-    {
-        return view('books.create');
-    }
-
     public function store(Request $request)
     {
         Book::create($request->all());

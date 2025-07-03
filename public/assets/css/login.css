@@ -43,7 +43,7 @@ input {
 .btn {
     width: 100%;
     padding: 10px;
-    background: #743014;
+    background: #6d1c26;
     border: none;
     color: white;
     font-size: 16px;
@@ -52,13 +52,13 @@ input {
     transition: 0.5s;
 }
 .btn:hover {
-    background: #741414;
-    border-radius: 20px 0 20px 0;
+    background: #333;
+    border-radius: 20px 20px 0 0 ;
 }
 .link {
     display: block;
     margin-top: 10px;
-    color: #743014;
+    color: #6d1c26;
     text-decoration: none;
 }
 .link:hover {

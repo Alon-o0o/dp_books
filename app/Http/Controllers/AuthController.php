@@ -50,7 +50,7 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('/books'); // Перенаправление после входа
+            return redirect()->intended('/'); // Перенаправление после входа
         }
 
         return back()->withErrors([

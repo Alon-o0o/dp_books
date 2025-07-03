@@ -11,8 +11,11 @@
         <p>{{ $book->author }}</p>
         <p class="p-abz">{{ $book->description }}</p>
         <div class="price">{{ $book->price }} ₽</div>
-
-        <button class="btn btn-buy">Написать продавцу</button>
-        <a href="/" class="btn btn-back">Назад</a>
+        @auth
+            <a href="{{ url('/profile') }}"><button class="btn btn-buy">Написать продавцу</button></a>
+            <a href="{{ route('book.buy', $book->id) }}" ><button class="btn btn-buy">Купить</button></a>
+        @endauth
+        
+        <a href="{{ url('/catalog') }}" class="btn btn-back">Назад</a>
     </div>
 @endsection

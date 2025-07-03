@@ -11,4 +11,10 @@ class Book extends Model
 
     protected $table = 'books'; // Указываем правильное имя таблицы
     protected $fillable = ['title','author', 'description', 'price', 'image','user_id']; 
+
+    public function buyers()
+    {
+        return $this->belongsToMany(User::class, 'purchases')->withTimestamps();
+    }
+
 }

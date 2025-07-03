@@ -52,21 +52,21 @@ body {
     border: none;
     outline: none;
     width: 430px;
+    margin-bottom: 10px;
 }
 .btn-buy {
     border: 1px solid #6a816b;
-    background-color: #abbdaca5;
-    color: white;
+    background-color: #abbdac80;
+    color: #6a816b;
 }
 .btn-buy:hover {
     background: #6a816b;
     border-radius: 20px 20px 0 0;
+    color: white;
 }
 .btn-back {
-    background: #741414;
+    background: #6d1c26;
     color: white;
-    margin-top: 10px;
-    padding: 10px 15px;
     width: 400px;
 }
 .btn-back:hover {

@@ -56,19 +56,18 @@
                 <button onclick="document.getElementById('contactsModal').style.display='block'" class="btn-condificu">Контакты</button>
                 <button onclick="document.getElementById('privacyModal').style.display='block'" class="btn-condificu">Политика конфиденциальности</button>
 
-                <div id="contactsModal" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5);">
-                    <div style="background: white; padding: 30px; width: 50%; margin: 100px auto; border-radius: 10px; color:darkolivegreen;">
+                <div id="contactsModal" style="display:none; z-index: 10; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5);">
+                    <div style="background: white; padding: 30px; width: 50%; margin: 100px auto; border-radius: 10px; color:darkolivegreen; ">
                         <h2>Контакты</h2>
                         <p>Вы можете связаться с нами по email: grammaaevg@gmail.com</p>
                         <p>Вы можете задать вопросы по телефону: +7(982-254)-62-45</p>
-                        <p>Вы можете связаться с нами по email: grammaaevg@gmail.com</p>
                         <br>
                         <button onclick="document.getElementById('contactsModal').style.display='none'" class="btn-clos">Закрыть</button>
                     </div>
                 </div>
 
-                <div id="privacyModal" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5);">
-                    <div style="background: white; padding: 30px; width: 50%; margin: 100px auto; border-radius: 10px; color:darkolivegreen;">
+                <div id="privacyModal" style="display:none; z-index: 10; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5);">
+                    <div style="background: white; padding: 30px; width: 50%; margin: 100px auto; border-radius: 10px; color:darkolivegreen; ">
                         <h2>Политика конфиденциальности</h2>
                         <p>Ваши данные не передаются третьим лицам.</p>
                         <p>Вы можете связаться с нами по email: grammaaevg@gmail.com</p>

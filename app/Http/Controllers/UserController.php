@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -61,4 +62,31 @@ class UserController extends Controller
     {
         //
     }
+    public function profile()
+    {
+        $user = Auth::user()->load('purchases');
+        return view('profile', compact('user'));
+    }
+    
+
+    public function uploadPhoto(Request $request)
+    {
+        $request->validate([
+            'photo' => 'required|image|mimes:jpeg,png,jpg,gif',
+        ]);
+
+        $user = Auth::user();
+
+        // Удалим старое фото, если не дефолтное
+        if ($user->photo && !str_contains($user->photo, 'default-avatar.png')) {
+            Storage::delete($user->photo);
+        }
+
+        $path = $request->file('photo')->store('uploads/avatars', 'public');
+        $user->photo = 'storage/' . $path;
+        $user->save();
+
+        return redirect()->back()->with('success', 'Фото успешно загружено!');
+    }
+
 }
